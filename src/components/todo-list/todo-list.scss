@@ -1,0 +1,25 @@
+.todo-list {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.remove-all {
+    margin-top: 10px;
+    background-color: tomato;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 15px;
+    transition: 0.3s background-color;
+    font-size: 16px;
+
+    &:hover {
+        background-color: rgb(134, 64, 52);
+    }
+}
+
+.empty {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: tomato;
+}

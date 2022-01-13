@@ -1,0 +1,22 @@
+.todo-list-item {
+    display: flex;
+    align-items: center;
+
+    span, input {
+        padding: 5px 0;
+        display: block;
+    }
+    
+    input {
+        margin-right: 5px;
+    }
+
+    .text {
+        width: 70%;
+    }
+
+    .remove {
+        cursor: pointer;
+        color: tomato;
+    }
+}

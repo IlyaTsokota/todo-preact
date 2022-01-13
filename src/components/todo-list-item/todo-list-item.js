@@ -1,4 +1,4 @@
-import './todo-list-item.scss';
+import style from './todo-list-item.scss';
 
 import { useStore } from '../../store';
 
@@ -6,10 +6,10 @@ const TodoListItem = ({ id, text, isCompleted }) => {
     const store = useStore();
     
     return (
-        <li class="todo-list-item">
-            <span class="text" style={{ color: isCompleted ? 'green' : ''}}>{text}</span>
-            <span class="done" onClick={() => store.toggleCompletedTodo(id)}>{isCompleted ? 'Start' : 'Done'}</span>
-            <span class="remove" onClick={() => store.removeTodo(id)}>Remove</span>
+        <li class={style["todo-list-item"]}>
+            <span class={style["text"]} style={{ textDecoration: isCompleted ? 'line-through' : ''}}>{text}</span>
+            <input type="checkbox" checked={isCompleted} onChange={() => store.toggleCompletedTodo(id)} />
+            <span class={style["remove"]} onClick={() => store.removeTodo(id)}>Remove</span>
         </li>
     );
 };
